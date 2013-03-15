@@ -42,6 +42,11 @@ Route::get('about', function()
 	return View::make('home.about');
 });
 
+Route::get('apitest', function()
+{
+	return View::make('home.apitest');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
