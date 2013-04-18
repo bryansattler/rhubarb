@@ -33,6 +33,18 @@ return array(
 
 	/*
 	|--------------------------------------------------------------------------
+	| Authentication Email
+	|--------------------------------------------------------------------------
+	|
+	| Here you may specify the database column that should be considered the
+	| "email" for your users. Typically, this will either be "email".
+	| Of course, you're free to change the value to anything.
+	|
+	*/
+	'email' => 'email',
+
+	/*
+	|--------------------------------------------------------------------------
 	| Authentication Password
 	|--------------------------------------------------------------------------
 	|

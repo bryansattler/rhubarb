@@ -1,39 +1,43 @@
 @layout('layouts.default')
 
 @section('content')
-	<h1>Sign Up</h1>
+	<div class="form-signin">
+		<h1>Sign Up</h1>
+		<h3>It's free and easy!</h3>
 
-	@if($errors->has())
-		<p>The following errors have occurred:</p>
+		@if($errors->has())
+			<p>The following errors have occurred:</p>
 
-		<ul id="form-errors">
-			{{ $errors->first('username', '<li>:message</li>') }}
-			{{ $errors->first('password', '<li>:message</li>') }}
-			{{ $errors->first('password_confirmation', '<li>:message</li>') }}
-		</ul>	
-	@endif
+			<ul id="form-errors">
+				{{ $errors->first('username', '<li>:message</li>') }}
+				{{ $errors->first('password', '<li>:message</li>') }}
+				{{ $errors->first('password_confirmation', '<li>:message</li>') }}
+			</ul>	
+		@endif
 
-	{{ Form::open('signup', 'POST') }}
+		{{ Form::open('signup', 'POST') }}
 
-	{{ Form::token() }}
+		{{ Form::token() }}
 
-		<p>
-		{{ Form::label('username', 'Username') }}
-		{{ Form::text('username', Input::old('username')) }}
-		</p>
+			<p>
+			{{ Form::text('username', Input::old('username'), array('placeholder' => 'Username')) }}
+			</p>
 
-		<p>
-		{{ Form::label('password', 'Password') }}
-		{{ Form::password('password') }}
-		</p>
-		
-		<p>
-		{{ Form::label('password_confirmation', 'Confirm Password') }}
-		{{ Form::password('password_confirmation') }}
-		</p>
-		
-		<p>{{ Form::submit('Sign Up') }}</p>
+			<p>
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Email')) }}
+			</p>			
 
-	{{ Form::close() }}
+			<p>
+			{{ Form::password('password', array('placeholder' => 'Password')) }}
+			</p>
+			
+			<p>
+			{{ Form::password('password_confirmation', array('placeholder' => 'Confirm Password')) }}
+			</p>
+			
+			<p>{{ Form::submit('Sign Up') }}</p>
 
+		{{ Form::close() }}
+		<p class="form-hints">Already a Member?<a href="#"> Log In</a></p>
+	</div>	
 @endsection

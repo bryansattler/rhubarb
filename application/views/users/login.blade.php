@@ -8,17 +8,17 @@
 		{{ Form::token() }}
 
 		<p>
-			{{ Form::label('username', 'Username') }}
-			{{ Form::text('username', Input::old('username')) }}
+			{{ Form::text('username', Input::old('username'), array('placeholder' => 'Username')) }}
 		</p>	
 
 		<p>
-			{{ Form::label('password', 'Password') }}
-			{{ Form::password('password') }}
+			{{ Form::password('password', array('placeholder' => 'Password')) }}
 		</p>	
 
-		<p class="">{{ Form::submit('Login') }}</p>	
+		<p>{{ Form::submit('Login') }}</p>	
 
 		{{ Form::close() }}
+		<p class="form-hints">Forgot your Password?<a href="#"> Reset</a></p>
+		<p class="form-hints">New to Rhubarb<a href="#"> Sign Up</a></p>
 	</div>
 @endsection

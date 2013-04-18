@@ -42,7 +42,7 @@
 	font-weight: bold;
 	background: #911133;
 	border: none;
-	border-radius: -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;;
+	border-radius: -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 	padding: 2px;
 }
 
@@ -54,18 +54,43 @@
 	background: #820f2e;
 }
 
+/*
+	FORM STYLES
+*/
 .form-signin {
     background-color: #FFFFFF;
     border: 1px solid #E5E5E5;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     margin: 20px auto 20px;
-    max-width: 300px;
+    max-width: 400px;
+    min-width: 300px;
     padding: 19px 29px 29px;
 }
 
+input[type="submit"]{
+	background: #91cd46;
+	border: 1px solid #77b030;
+	border-radius: -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	padding: 5% 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #ffffff;	
+}
+
+input[type='password']{
+	color: #cccccc;
+}
+
+::-webkit-input-placeholder { color:#777777; }
+::-moz-placeholder { color:#777777; } /* firefox 19+ */
+:-ms-input-placeholder { color:#777777; } /* ie */
+input:-moz-placeholder { color:#777777; }
 
 
+.form-hints{
+	color:#777777;
+}
 
 /* Use the following CSS code if you want to have a class per icon */
 /*

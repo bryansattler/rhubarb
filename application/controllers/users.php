@@ -16,7 +16,8 @@ class Users_Controller extends Base_Controller {
 		if ($validation->passes()) {
 			User::create(array(
 				'username'=>Input::get('username'),
-				'password'=>Hash::make(Input::get('password'))
+				'password'=>Hash::make(Input::get('password')),
+				'email'=>Input::get('email')
 			));
 
 			/* Login the user that just signed up */
