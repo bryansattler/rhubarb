@@ -2,42 +2,46 @@
 <html>
 <head>
 	<title>{{ $title }}</title>
-	{{ HTML::style('/css/style.css') }}
+   	{{ Asset::styles() }}
+   	{{ Asset::scripts() }}
 </head>
-
 <body>
-	<div id="container">
 
-		<div id="header">
-			{{ HTML::link('/', 'Rhubarb') }}
-		</div><!-- end header -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand replace" href="/"></a>
+				<div class="nav-collapse collapse">
+						
+						@if(!Auth::check())
+						<ul class="nav pull-right">
+							<li>{{ HTML::link_to_route('login', 'Login') }}</li>
+							<li class="btn-signup">{{ HTML::link_to_route('signup', 'Sign Up') }}</li>
+						</ul>
+						@else
+						<ul class="nav">
+						<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
+						<li>{{ HTML::link('/', 'Watch List') }}</li>
+						<li>{{ HTML::link('/', 'Browse') }}</li>
+						<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
+						</ul>
+						@endif
+				</div>
+			</div><!-- end container -->	
+		</div><!-- end navbar-inner -->			
+	</div><!-- end navbar-->	
 
-		<div id="nav">
-			<ul>
-				@if(!Auth::check())
-				<li>{{ HTML::link_to_route('signup', 'Sign Up') }}</li>
-				<li>{{ HTML::link_to_route('login', 'Login') }}</li>
-				@else
-				<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
-				<li>{{ HTML::link('/', 'Watch List') }}</li>
-				<li>{{ HTML::link('/', 'Browse') }}</li>
-				<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
-				@endif
-			</ul>	
-		</div><!-- end nav -->
-
-		<div id="content">
-			@if(Session::has('message'))
+	<div class="container">
+		@if(Session::has('message'))
 				<p id="message">{{ Session::get('message') }}</p>
 			@endif
 
 			@yield('content')
-		</div><!-- end content -->		
 
-		<div id="footer">
-			&copy; Rhubarb {{ date('Y') }}
-		</div><!-- end footer -->		
-
-	</div><!-- end container -->		
+		<footer class="footer">
+			<p class="footer-copyright">&copy; Rhubarb {{ date('Y') }}</p>
+		</footer><!-- end footer -->	
+			
+	</div>			
 </body>	
 </html>

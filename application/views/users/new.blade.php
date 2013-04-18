@@ -17,22 +17,22 @@
 
 	{{ Form::token() }}
 
-	<p>
-		{{ Form::label('username', 'Username') }}<br />
+		<p>
+		{{ Form::label('username', 'Username') }}
 		{{ Form::text('username', Input::old('username')) }}
-	</p>
+		</p>
 
-	<p>
-		{{ Form::label('password', 'Password') }}<br />
+		<p>
+		{{ Form::label('password', 'Password') }}
 		{{ Form::password('password') }}
-	</p>	
-
-	<p>
-		{{ Form::label('password_confirmation', 'Confirm Password') }}<br />
+		</p>
+		
+		<p>
+		{{ Form::label('password_confirmation', 'Confirm Password') }}
 		{{ Form::password('password_confirmation') }}
-	</p>	
-
-	<p> {{ Form::submit('Sign Up') }} </p>
+		</p>
+		
+		<p>{{ Form::submit('Sign Up') }}</p>
 
 	{{ Form::close() }}
 
