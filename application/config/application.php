@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'index' => 'index.php',
+	'index' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ return array(
 	|
 	*/
 
-	'key' => 'DkriFt1ta49UHWzULJNInSucqaAsL28E',
+	'key' => 'xOqPEuAwTLNH1zDBItQ5Mp9rUKlamBV9',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -159,6 +159,7 @@ return array(
 		'Blade'      	=> 'Laravel\\Blade',
 		'Bundle'     	=> 'Laravel\\Bundle',
 		'Cache'      	=> 'Laravel\\Cache',
+		'Command'    	=> 'Laravel\\CLI\\Command',
 		'Config'     	=> 'Laravel\\Config',
 		'Controller' 	=> 'Laravel\\Routing\\Controller',
 		'Cookie'     	=> 'Laravel\\Cookie',
