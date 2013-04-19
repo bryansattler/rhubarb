@@ -13,6 +13,13 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
+				<!-- Responsive Menu Button -->
+	            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
+	            <!-- Logo -->				
 				<a class="brand replace" href="/"></a>
 				<div class="nav-collapse collapse">
 						
@@ -23,10 +30,10 @@
 						</ul>
 						@else
 						<ul class="nav">
-						<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
-						<li>{{ HTML::link_to_route('watchlist', 'Watchlist') }}</li>
-						<li>{{ HTML::link_to_route('browse', 'Browse') }}</li>
-						<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
+							<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
+							<li>{{ HTML::link_to_route('watchlist', 'Watchlist') }}</li>
+							<li>{{ HTML::link_to_route('browse', 'Browse') }}</li>
+							<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
 						</ul>
 						@endif
 				</div>
@@ -41,8 +48,10 @@
 			@endif
 
 			@yield('content')			
-	</div>
-	<footer class="footer push">
+	</div><!-- end content container -->
+	<div id="push"></div>
+
+	<footer class="footer">
 		<div class="container">
 			<p class="muted credit">&copy; Rhubarb {{ date('Y') }}</p>
 		</div>
