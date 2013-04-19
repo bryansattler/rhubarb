@@ -97,9 +97,10 @@ input:-moz-placeholder { color:#777777; }
 
 .movieCard{
 	/* styles */
-	width: 180px;
-	margin: 0 10px 25px 0;
+	width: 168px;
+	margin: 0 20px 25px 0;
 	float: left;
+	border: 1px solid #cccccc;
 }
 
 .movieResults ul, li {
@@ -108,8 +109,9 @@ input:-moz-placeholder { color:#777777; }
 }
 
 .movieResults ul, img {
-	width: 180px;
-	height: 270px;
+	width: 168px;
+	height: 252px;
+	border-bottom: 1px solid #cccccc;
 }
 
 .movieCardInfo{

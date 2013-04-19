@@ -21,7 +21,7 @@
 						@else
 						<ul class="nav">
 						<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
-						<li>{{ HTML::link('/', 'Watch List') }}</li>
+						<li>{{ HTML::link('/', 'Watchlist') }}</li>
 						<li>{{ HTML::link('/', 'Browse') }}</li>
 						<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
 						</ul>
