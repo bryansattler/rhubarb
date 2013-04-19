@@ -32,12 +32,12 @@
 	</div><!-- end navbar-->	
 
 	<div class="container">
+		
 		@if(Session::has('message'))
 				<p id="message">{{ Session::get('message') }}</p>
 			@endif
 
 			@yield('content')
-
 		<footer class="footer">
 			<p class="footer-copyright">&copy; Rhubarb {{ date('Y') }}</p>
 		</footer><!-- end footer -->	
