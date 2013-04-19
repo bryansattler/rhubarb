@@ -22,7 +22,7 @@
 						<ul class="nav">
 						<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
 						<li>{{ HTML::link_to_route('watchlist', 'Watchlist') }}</li>
-						<li>{{ HTML::link('/', 'Browse') }}</li>
+						<li>{{ HTML::link_to_route('browse', 'Browse') }}</li>
 						<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
 						</ul>
 						@endif
