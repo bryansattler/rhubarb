@@ -3680,22 +3680,22 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-navbar {
   display: none;
   float: right;
-  padding: 7px 10px;
-  margin-left: 5px;
+  padding: 10px 10px;
+  margin-left: 5px 5px;
   margin-right: 5px;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #931134;
-  background-image: -moz-linear-gradient(top, #931134, #931134);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#931134), to(#931134));
-  background-image: -webkit-linear-gradient(top, #931134, #931134);
-  background-image: -o-linear-gradient(top, #931134, #931134);
-  background-image: linear-gradient(to bottom, #931134, #931134);
+  background-color: #2d2d2d;
+  background-image: -moz-linear-gradient(top, #303030, #2d2d2d);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#303030), to(#2d2d2d));
+  background-image: -webkit-linear-gradient(top, #303030, #2d2d2d);
+  background-image: -o-linear-gradient(top, #303030, #2d2d2d);
+  background-image: linear-gradient(to bottom, #303030, #2d2d2d);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff931134', endColorstr='#ff931134', GradientType=0);
-  border-color: #931134 #931134 #4f091c;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff303030', endColorstr='#ff2d2d2d', GradientType=0);
+  border-color: #303030 #2d2d2d #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #931134;
+  *background-color: #2d2d2d;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -3710,8 +3710,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-navbar.disabled,
 .navbar .btn-navbar[disabled] {
   color: #ffffff;
-  background-color: #931134;
-  *background-color: #7c0f2c;
+  background-color: #000000;
+  *background-color: #000000;
 }
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {

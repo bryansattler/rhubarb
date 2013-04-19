@@ -136,11 +136,16 @@ input:-moz-placeholder { color:#777777; }
 	color: #000;
 }
 
+#wrap > .container {
+  padding-top: 100px;
+}
 
 /* Footer */
 .footer, .push{
 	height: 60px;
 }
+
+
 
 /* Use the following CSS code if you want to have a class per icon */
 /*

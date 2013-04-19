@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<div id="wrap">
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -23,12 +24,12 @@
 				<a class="brand replace" href="/"></a>
 				<div class="nav-collapse collapse">
 						
-						@if(!Auth::check())
+						@if(!Auth::check()) <!-- Show this nav if user isn't logged in -->
 						<ul class="nav pull-right">
 							<li>{{ HTML::link_to_route('login', 'Login') }}</li>
 							<li class="btn-signup">{{ HTML::link_to_route('signup', 'Sign Up') }}</li>
 						</ul>
-						@else
+						@else<!-- Show this nav if user is logged in-->
 						<ul class="nav">
 							<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
 							<li>{{ HTML::link_to_route('watchlist', 'Watchlist') }}</li>
@@ -36,10 +37,10 @@
 							<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
 						</ul>
 						@endif
-				</div>
-			</div><!-- end container -->	
-		</div><!-- end navbar-inner -->			
-	</div><!-- end navbar-->	
+				</div><!-- /.nav-collapse .collapse -->
+			</div><!-- /.container for nav -->	
+		</div><!-- /.navbar-inner -->			
+	</div><!-- /.navbar .navbar-fixed-top -->	
 
 	<div class="container">
 		
@@ -48,13 +49,13 @@
 			@endif
 
 			@yield('content')			
-	</div><!-- end content container -->
+	</div><!-- /.container for content -->
 	<div id="push"></div>
-
+</div><!-- /#wrap -->
 	<footer class="footer">
 		<div class="container">
 			<p class="muted credit">&copy; Rhubarb {{ date('Y') }}</p>
 		</div>
-	</footer><!-- end footer -->					
+	</footer><!-- /footer -->					
 </body>	
 </html>
