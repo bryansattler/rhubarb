@@ -8,7 +8,7 @@
 		@if($errors->has())
 			<p>The following errors have occurred:</p>
 
-			<ul id="form-errors">
+			<ul class ="alert-error text-error">
 				{{ $errors->first('username', '<li>:message</li>') }}
 				{{ $errors->first('email', '<li>:message</li>') }}
 				{{ $errors->first('password', '<li>:message</li>') }}

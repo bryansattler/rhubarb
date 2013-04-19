@@ -4243,6 +4243,10 @@ a.thumbnail:focus {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
 }
 .alert-danger h4,
 .alert-error h4 {

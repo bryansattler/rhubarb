@@ -78,6 +78,17 @@ input[type="submit"]{
 	color: #ffffff;	
 }
 
+input[type="submit"]:hover{
+	background: #b8d98e;
+	border: 1px solid #98c85b;
+}
+
+input[type="submit"]:active{
+	background: #6f9522;
+	border: 1px solid #5a791c;
+}
+	
+
 input[type='password']{
 	color: #cccccc;
 }
