@@ -43,5 +43,3 @@
 			?>
 		@endif
 @endsection
-
-<div class="row"></div>

@@ -10,6 +10,7 @@
 
 			<ul id="form-errors">
 				{{ $errors->first('username', '<li>:message</li>') }}
+				{{ $errors->first('email', '<li>:message</li>') }}
 				{{ $errors->first('password', '<li>:message</li>') }}
 				{{ $errors->first('password_confirmation', '<li>:message</li>') }}
 			</ul>	
