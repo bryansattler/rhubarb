@@ -4,6 +4,9 @@
 	<title>{{ $title }}</title>
    	{{ Asset::styles() }}
    	{{ Asset::scripts() }}
+
+    <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script>
+
 </head>
 <body>
 

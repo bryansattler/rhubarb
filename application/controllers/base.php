@@ -31,6 +31,10 @@ class Base_Controller extends Controller {
         Asset::add('jquery_placeholder', 'js/jquery.placeholder.js');
         Asset::add('jquery_tagsinput', 'js/jquery.tagsinput.js');
         Asset::add('lte_ie7_24', 'js/lte-ie7-24.js');
+        Asset::add('pusher_js', 'http://js.pusher.com/2.0/pusher.min.js');
+        Asset::add('activity_stream','../activity-streams/src/PusherActivityStreamer.js');
+
+
 
         //fonts
         Asset::add('ico_16_eot', 'fonts/Flat-UI-Icons-16.eot');

@@ -1,6 +1,7 @@
 @import url('/css/bootstrap.css');
 @import url('/css/bootstrap-responsive.css');
 @import url('/css/jquery-ui-1.10.0.custom.css');
+@import url('../activity-streams/activity-streams.css');
 /*@import url('/css/flat-ui.css');*/
 /*@import url('/css/video-js.css');*/
 
