@@ -40,11 +40,12 @@
 				<p id="message">{{ Session::get('message') }}</p>
 			@endif
 
-			@yield('content')
-		<footer class="footer">
-			<p class="footer-copyright">&copy; Rhubarb {{ date('Y') }}</p>
-		</footer><!-- end footer -->	
-			
-	</div>			
+			@yield('content')			
+	</div>
+	<footer class="footer push">
+		<div class="container">
+			<p class="muted credit">&copy; Rhubarb {{ date('Y') }}</p>
+		</div>
+	</footer><!-- end footer -->					
 </body>	
 </html>
