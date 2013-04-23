@@ -5,7 +5,12 @@
    	{{ Asset::styles() }}
    	{{ Asset::scripts() }}
 
-    <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script>
+   	<noscript>This page uses Javascript. Your browser either
+		doesn't support Javascript or you have it turned off.
+		To see this page as it is meant to appear please use
+		a Javascript enabled browser.</noscript>
+
+    <!-- <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script> -->
 
 </head>
 <body>
