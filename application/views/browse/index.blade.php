@@ -34,6 +34,7 @@
 
 		// play with the data!
 		$movies = $search_results->movies;
+		echo '<div id="browse">';
 		echo '<ul class="movieResults">';
 			foreach ($movies as $movie) {
 			  echo '<div class="movieCard">';	
@@ -41,8 +42,8 @@
 			  echo '<li class="movieCardInfo"><a href="' . $movie->links->alternate . '">' . $movie->title . "</a></li>";
 			  echo '</div>';
 			}
-			echo '</ul>';
-			
+		echo '</ul>';
+		echo '</div>';	
 			?>
 		@endif
 @endsection
