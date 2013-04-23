@@ -9,8 +9,12 @@
 		$apikey = 'caw7u9euxvcwuabe5zjwe9tg';
 		$q = urlencode('Action'); // make sure to url encode an query parameters
 
-		// construct the query with our apikey and the query we want to make
-		$endpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $apikey . '&q=' . $q;
+		// construct the query with our apikey and the query based on keywords
+		// $endpoint = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=' . $apikey . '&q=' . $q;
+
+		// Queries Upcoming Movies 
+		$endpoint = 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=' . $apikey . '';
+
 
 		// setup curl to make a call to the endpoint
 		$session = curl_init($endpoint);
