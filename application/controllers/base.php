@@ -30,6 +30,10 @@ class Base_Controller extends Controller {
 
         Asset::add('application', 'js/application.js');
 
+        /* jQuery History Plugin */
+        Asset::add('history', 'js/history.js');
+
+
         /* Bootstrap JS */
         Asset::add('bootstrap_tooltip', 'js/bootstrap-tooltip.js');
         Asset::add('bootstrap_alert', 'js/bootstrap-alert.js');
@@ -51,6 +55,9 @@ class Base_Controller extends Controller {
 
         /* Icon JS */
         Asset::add('icon_font_ie7', 'js/icon-font-ie7.js');
+
+        /* Custom Rhubarb JS */
+        Asset::add('rhubarb', 'js/rhubarb.js');
 
         /* Pusher Activity Stream */
         // Asset::add('pusher_js', 'http://js.pusher.com/2.0/pusher.min.js');

@@ -3,14 +3,11 @@
 <head>
 	<title>{{ $title }}</title>
    	{{ Asset::styles() }}
-   	{{ Asset::scripts() }}
-
+   
    	<noscript>This page uses Javascript. Your browser either
 		doesn't support Javascript or you have it turned off.
 		To see this page as it is meant to appear please use
 		a Javascript enabled browser.</noscript>
-
-    <!-- <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script> -->
 
 </head>
 <body>
@@ -61,6 +58,12 @@
 		<div class="container">
 			<p class="muted credit">&copy; Rhubarb {{ date('Y') }}</p>
 		</div>
-	</footer><!-- /footer -->					
+	</footer><!-- /footer -->
+	{{ Asset::scripts() }}
+	<script>
+		
+	</script>
+    <!-- <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script> -->
+
 </body>	
 </html>
