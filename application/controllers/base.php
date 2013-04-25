@@ -30,10 +30,6 @@ class Base_Controller extends Controller {
 
         Asset::add('application', 'js/application.js');
 
-        /* jQuery History Plugin */
-        Asset::add('history', 'js/history.js');
-
-
         /* Bootstrap JS */
         Asset::add('bootstrap_tooltip', 'js/bootstrap-tooltip.js');
         Asset::add('bootstrap_alert', 'js/bootstrap-alert.js');
