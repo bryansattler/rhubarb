@@ -5,7 +5,7 @@ By Bryan Sattler
 
 Rhubarb is a simple web app that utilizes the RottenTomatoes API to allow users to do the following:
 ---
-- Search for movies (Filter searches by Current Box Office Movies,Upcoming Movies, New releases)
+- Search for movies (Filter searches by Current Box Office Movies, Upcoming Movies, New releases)
 - Save movies they "Want to See"
 - Watch Movie Clips Trailers
 - Share movies with others through Facebook & Twitter
