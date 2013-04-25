@@ -1,4 +1,4 @@
-h1. Rhubarb
+## Rhubarb
 =======
 
 By Bryan Sattler
