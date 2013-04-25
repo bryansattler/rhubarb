@@ -63,8 +63,6 @@
 			  echo '</div>';
 			}
 		echo '</ul>';
-		echo '<p class="test">Test</p>'
-
 		echo '</div>';	
 			?>
 		@endif
