@@ -41,7 +41,20 @@
 			foreach ($movies as $movie) {
 			  echo '<div class="movieCard">';	
 			  echo '<li><img src="'. $movie->posters->detailed .'"</li>';
-			  echo '<li class="movieCardInfo"><a href="movie" class="movie">' . $movie->title . '</a></li>';
+			  // echo '<li class="movieCardInfo"><a href="movie" class="movie">' . $movie->title . '</a></li>';
+
+			  echo '<li class="movieCardInfo"><a href="movie" class="movie">' . $movie->title . '</a><div class="details"></div></li>';
+
+
+			  /*
+			  	
+			  	Need to link to get the id of that movie,
+			  	pass it to a variable
+			  	get that variable and use it to display movie info detail page
+			  	with AJAX replacing the contents of browse div
+			  	http://developer.rottentomatoes.com/docs/read/json/v10/Movie_Info
+
+			   */
 
 			  echo '</div>';
 			}
