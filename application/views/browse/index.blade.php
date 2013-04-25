@@ -41,25 +41,7 @@
 			foreach ($movies as $movie) {
 			  echo '<div class="movieCard">';	
 			  echo '<li><img src="'. $movie->posters->detailed .'"</li>';
-			  echo '<li class="movieCardInfo"><a href="#">' . $movie->title . "</a></li>"; 
-			  /* 
-
-			  See jQuery History plugin to replace the contents of the #browse div with individual movie view on the same page.  Maybe it should link to content in an external php file.
-
-			  Add back button that links back to the Upcoming movies or the user's last query http://plugins.jquery.com/history/ 
-				
-			  
-			  Other Links:
-
-			  https://gist.github.com/arvgta/4017712
-
-			  http://www.webdeveloper.com/forum/showthread.php?268893-How-do-I-change-the-contents-of-a-lt-div-gt-with-a-click(link)
-
-			  http://api.jquery.com/replaceWith/
-
-
-
-			  */
+			  echo '<li class="movieCardInfo"><a href="/details/" class="movie">' . $movie->title . '"</a></li>';
 			  echo '</div>';
 			}
 		echo '</ul>';
