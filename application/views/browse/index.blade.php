@@ -41,7 +41,8 @@
 			foreach ($movies as $movie) {
 			  echo '<div class="movieCard">';	
 			  echo '<li><img src="'. $movie->posters->detailed .'"</li>';
-			  echo '<li class="movieCardInfo"><a href="/details/" class="movie">' . $movie->title . '"</a></li>';
+			  echo '<li class="movieCardInfo"><a href="movie" class="movie">' . $movie->title . '</a></li>';
+
 			  echo '</div>';
 			}
 		echo '</ul>';
