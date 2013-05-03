@@ -29,12 +29,12 @@
 						@if(!Auth::check()) <!-- Show this nav if user isn't logged in -->
 						<ul class="nav pull-right">
 							<li>{{ HTML::link_to_route('login', 'Login') }}</li>
-							<li class="btn-signup">{{ HTML::link_to_route('signup', 'Sign Up') }}</li>
+							<li class="btn-header">{{ HTML::link_to_route('signup', 'Sign Up') }}</li>
 						</ul>
 						@else<!-- Show this nav if user is logged in-->
 						<ul class="nav">
 							<li><a href="/activity"><i class="fui-bubble-24"></i> Activity Stream</a></li>
-							<li><a href="/watchlist"><i class="fui-eye-24"></i> Activity Stream</a></li>
+							<li><a href="/watchlist"><i class="fui-eye-24"></i> Watchlist</a></li>
 							<li><a href="/browse"><i class="fui-menu-24"></i> Browse</a>
 								<ul>
 									<li><a href="#">Action &amp; Adventure</a></li>
@@ -50,7 +50,14 @@
 									<li><a href="#">Sci-fi &amp; Fantasy</a></li>			
 								</ul>	
 							</li>
-							<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
+							<li class="btn-header"><a href="#"><i class="icon-search icon-white"></i> </a></li>
+							<li class="btn-header"><a href="#"><i class="icon-cog icon-white"></i><img src="img/user/profile-pic.png" class="pic-sm"/><span class="hidden">Search</span></a>
+								<ul>
+									<li> <a href="#">My Profile</a></li>
+									<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
+								</ul>	
+							</li>
+							
 						</ul>
 						@endif
 				</div><!-- /.nav-collapse .collapse -->
