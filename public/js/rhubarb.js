@@ -1,22 +1,13 @@
-// $(function() {
-//   $('.movie').click(function() {
-//     $('.details').load(this.href);
-//       return false;
-//   });
-// });
+// $(document).ready(function() {
 
-// $(".movie").click(function(){  $("#browse").html("test") });
+// 	$('#details').click(function(e) {
+// 		// prevent the link's default action of firing
+// 		e.preventDefault();
+// 	});
 
+// 	// try to GET the movie content
+// 	$.get(BASE+'movie', function(data) {
+// 		$('#browse').html(data);
+// 	)};
 
-$(".movie").click(function(){  $("#browse").html("test") });
-
-
-
-
-// $(function() {
-//     $('.movie').click(function() {
-//         $('#browse').load("rt/movie.php .details");
-
-//         return false;
-//     });
 // });

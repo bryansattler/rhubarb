@@ -55,6 +55,94 @@
 	background: #820f2e;
 }
 
+
+.nav-collapse.collapse {
+    height: auto;
+    overflow: visible;
+}
+.collapse {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.35s ease 0s;
+}
+
+  .navbar .nav > li:hover > ul {
+    top: 100%; }
+  .navbar .nav > li > ul {
+    padding-top: 13px;
+    top: 80%;
+    background-color: white\9; }
+    .navbar .nav > li > ul:before {
+      content: "";
+      border-style: solid;
+      border-width: 0 9px 9px 9px;
+      border-color: transparent transparent #292929 transparent;
+      height: 0px;
+      position: absolute;
+      left: 15px;
+      top: 5px;
+      width: 0px;
+      -webkit-transform: rotate(360deg); }
+    .navbar .nav > li > ul li:hover ul {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+      display: block\9; }
+    .navbar .nav > li > ul li ul {
+      left: 100%; }
+  .navbar .nav > li > a {
+    padding: 14px 15px 17px; }
+    .navbar .nav > li > a:hover {
+      color: #ffffff; }
+  .navbar .nav li {
+    position: relative; }
+    .navbar .nav li:hover > ul {
+      opacity: 1;
+      z-index: 100;
+      -webkit-transform: scale(1, 1);
+      display: block\9; }
+  .navbar .nav ul {
+    border-radius: 4px;
+    left: 15px;
+    list-style-type: none;
+    margin-left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 234px;
+    z-index: -100;
+    -webkit-transform: scale(1, 0.99);
+    -webkit-transform-origin: 0 0;
+    display: none\9;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    -webkit-backface-visibility: hidden; }
+    .navbar .nav ul ul {
+      left: 95%;
+      padding-left: 5px; }
+    .navbar .nav ul li {
+      background-color: #2E2929;
+      padding: 0 3px 3px; }
+      .navbar .nav ul li:first-child {
+        border-radius: 4px 4px 0 0;
+        padding-top: 3px; }
+      .navbar .nav ul li:last-child {
+        border-radius: 0 0 4px 4px; }
+      .navbar .nav ul li.active > a, .navbar .nav ul li.active > a:hover {
+        background-color: #dc325a;
+        color: white; }
+    .navbar .nav ul a {
+      border-radius: 2px;
+      color: white;
+      display: block;
+      font-size: 14px;
+      padding: 6px 9px;
+      text-decoration: none; }
+      .navbar .nav ul a:hover {
+        background-color: #dc325a; }
+
 /*
 	FORM STYLES
 */
@@ -105,7 +193,10 @@ input:-moz-placeholder { color:#777777; }
 }
 
 
-/* WATCHLIST PAGE */
+.movie-count {
+	float: left;
+	margin-right: 100px;
+}
 
 .movieCard{
 	/* styles */
@@ -117,7 +208,6 @@ input:-moz-placeholder { color:#777777; }
 
 .movieResults ul, li {
 	list-style-type: none;
-	font-size: .85em;
 }
 
 .movieResults ul, img {
@@ -145,79 +235,442 @@ input:-moz-placeholder { color:#777777; }
 	height: 60px;
 }
 
+/* Tomatometer jQuery Slider */
 
+.tomatometer {
+	margin: 5px 0 0 400px;
+	width: 320px;
+}
+
+.tmLabel {
+	float: left;
+	margin: 0 5px 0 125px;
+}
+
+.tm-icon-small {
+	width: 12px;
+	height: 12px;
+	border-bottom: none;
+}
+
+.fresh {
+	margin: -15px 0 0 345px;	
+}
+
+.ui-slider {
+  background: #BEC3C7;
+  width: 320px;
+  border-radius: 32px;
+  margin-top: -15px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+  .progress .bar, .ui-slider .bar {
+    background: #1abc9c;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+  .progress .bar-success, .ui-slider .bar-success {
+    background-color: #dc325a;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+  .progress .bar-warning, .ui-slider .bar-warning {
+    background-color: #f1c40f;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+  .progress .bar-danger, .ui-slider .bar-danger {
+    background-color: #e74c3c;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+  .progress .bar-info, .ui-slider .bar-info {
+    background-color: #2d82cd;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+
+.ui-slider-handle {
+  background-color: #aa143c;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  margin-left: -9px;
+  position: absolute;
+  top: -3px;
+  width: 18px;
+  z-index: 2;
+  -webkit-transition: background 0.25s;
+  -moz-transition: background 0.25s;
+  -o-transition: background 0.25s;
+  transition: background 0.25s;
+  -webkit-backface-visibility: hidden; }
+  .ui-slider-handle[style*='100'] {
+    margin-left: -15px; }
+  .ui-slider-handle:hover, .ui-slider-handle:focus {
+    background-color: #e35b7a;
+    outline: none; }
+  .ui-slider-handle:active {
+    background-color: #dc325a; }
+
+.ui-slider-range {
+  background-color: #Dc325a;
+  border-radius: 30px 0 0 30px;
+  display: block;
+  height: 100%;
+  position: absolute;
+  z-index: 1; }
+
+.ui-slider-segment {
+  background-color: #d6dbe0;
+  border-radius: 50%;
+  float: left;
+  height: 6px;
+  margin: 3px -6px 0 25%;
+  width: 6px; }
+
+
+/* Sort By Dropdown */
+
+.sortDk {
+	margin-right: 5px;
+	float: left;
+}
+
+.dk_container {
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+  outline: none; 
+  /*float: right; */
+}
+
+.dk_toggle {
+  background-color: #d7dcdf;
+  color: #666666;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 11px 45px 11px 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden; }
+  .dk_toggle:hover, .dk_toggle:focus, .dk_focus .dk_toggle {
+    background-color: #bec3c7;
+    color: #666666;
+    outline: none; 
+	text-decoration: none;}
+  .dk_toggle:active {
+    background-color: #d5d8db;
+    outline: none; }
+    .dk_toggle:active .select-icon {
+      border-left-color: transparent; }
+
+.select-icon {
+  background: #d7dcdf url("../img/select/toggle.png") no-repeat right center;
+  border-left: 2px solid rgba(52, 73, 94, 0.15);
+  border-radius: 0 6px 6px 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden; }
+
+.dk_open {
+  z-index: 10; }
+  .dk_open .dk_toggle {
+    background-color: #bec3c7; }
+    .dk_open .dk_toggle .select-icon {
+      background-color: #AAB0B5;
+      border-left-color: transparent; }
+
+.dk_options {
+  padding-top: 14px; }
+  .dk_options:before {
+    content: "";
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #2E2929 transparent;
+    height: 0px;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    width: 0px;
+    -webkit-transform: rotate(360deg); }
+  .dk_options:before {
+    left: auto;
+    right: 12px; }
+  .dk_options li {
+    padding-bottom: 3px; }
+  .dk_options a {
+    border-radius: 3px;
+    color: #ffffff;
+    display: block;
+    padding: 5px 9px;
+    text-decoration: none; }
+    .dk_options a:hover {
+      background-color: #dc325a; }
+
+.dk_option_current a {
+  background-color: #dc325a; }
+
+.dk_options_inner {
+  background-color: #2E2929;
+  border-radius: 5px;
+  margin: 0;
+  max-height: 244px;
+  padding: 3px 3px 0; }
+
+.dk_touch .dk_options {
+  max-height: 250px; }
+
+.dk_container {
+  display: none;
+  position: relative;
+  vertical-align: middle; }
+  .dk_container.dk_shown {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+  .dk_container[class*="span"] {
+    float: right;
+    margin: -30px 0 20px 0; 
+}
+
+.dk_toggle {
+  display: block;
+  position: relative; }
+
+.dk_open {
+  position: relative; }
+  .dk_open .dk_options {
+    margin-top: -1px;
+    opacity: 1;
+    z-index: 10;
+    display: block\9; }
+  .dk_open .dk_label {
+    color: inherit; }
+
+.dk_options {
+  margin-top: -21px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  width: 220px;
+  z-index: -100;
+  display: none\9;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-backface-visibility: hidden; }
+  .select-right .dk_options {
+    left: auto;
+    right: 0; }
+  .dk_options a {
+    display: block; }
+
+.dk_options_inner {
+  overflow: auto;
+  outline: none;
+  position: relative; }
+
+.dk_touch .dk_options {
+  overflow: hidden; }
+.dk_touch .dk_options_inner {
+  max-height: none;
+  overflow: visible; }
+
+.dk_fouc select {
+  position: relative;
+  top: -99999em;
+  visibility: hidden; }
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+/* WATCHLIST PAGE */
+
+
+/** ICONS **/
+@font-face {
+  font-family: "Flat-UI-Icons-16";
+  src: url("../fonts/Flat-UI-Icons-16.eot");
+  src: url("../fonts/Flat-UI-Icons-16.eot?#iefix") format("embedded-opentype"), url("../fonts/Flat-UI-Icons-16.woff") format("woff"), url("../fonts/Flat-UI-Icons-16.ttf") format("truetype"), url("../fonts/Flat-UI-Icons-16.svg#Flat-UI-Icons-16") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: "Flat-UI-Icons-16";
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
 
 /* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="fui-"]:before {
-*/
+/*Instead of a list of all class selectors,
+ *you can use the generic selector below, but it's slower:
+ *[class*="fui-"]:before { */
+.fui-volume-16:before, .fui-video-16:before, .fui-time-16:before, .fui-settings-16:before, .fui-plus-16:before, .fui-new-16:before, .fui-menu-16:before, .fui-man-16:before, .fui-mail-16:before, .fui-lock-16:before, .fui-location-16:before, .fui-heart-16:before, .fui-eye-16:before, .fui-cross-16:before, .fui-cmd-16:before, .fui-checkround-16:before, .fui-checkmark-16:before, .fui-camera-16:before, .fui-calendar-16:before, .fui-bubble-16:before {
+  font-family: "Flat-UI-Icons-16";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.fui-volume-16:before {
+  content: "\e000"; }
+
+.fui-video-16:before {
+  content: "\e001"; }
+
+.fui-time-16:before {
+  content: "\e002"; }
+
+.fui-settings-16:before {
+  content: "\e003"; }
+
+.fui-plus-16:before {
+  content: "\e004"; }
+
+.fui-new-16:before {
+  content: "\e005"; }
+
+.fui-menu-16:before {
+  content: "\e006"; }
+
+.fui-man-16:before {
+  content: "\e007"; }
+
+.fui-mail-16:before {
+  content: "\e008"; }
+
+.fui-lock-16:before {
+  content: "\e009"; }
+
+.fui-location-16:before {
+  content: "\e00a"; }
+
+.fui-heart-16:before {
+  content: "\e00b"; }
+
+.fui-eye-16:before {
+  content: "\e00c"; }
+
+.fui-cross-16:before {
+  content: "\e00d"; }
+
+.fui-cmd-16:before {
+  content: "\e00e"; }
+
+.fui-checkround-16:before {
+  content: "\e00f"; }
+
+.fui-checkmark-16:before {
+  content: "\e010"; }
+
+.fui-camera-16:before {
+  content: "\e011"; }
+
+.fui-calendar-16:before {
+  content: "\e012"; }
+
+.fui-bubble-16:before {
+  content: "\e013"; }
+
+@font-face {
+  font-family: "Flat-UI-Icons-24";
+  src: url("../fonts/Flat-UI-Icons-24.eot");
+  src: url("../fonts/Flat-UI-Icons-24.eot?#iefix") format("embedded-opentype"), url("../fonts/Flat-UI-Icons-24.woff") format("woff"), url("../fonts/Flat-UI-Icons-24.ttf") format("truetype"), url("../fonts/Flat-UI-Icons-24.svg#Flat-UI-Icons-24") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: "Flat-UI-Icons-24";
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*Instead of a list of all class selectors,
+ *you can use the generic selector below, but it's slower:
+ *[class*="fui-"]:before { */
 .fui-video-24:before, .fui-time-24:before, .fui-settings-24:before, .fui-plus-24:before, .fui-new-24:before, .fui-menu-24:before, .fui-man-24:before, .fui-mail-24:before, .fui-lock-24:before, .fui-location-24:before, .fui-heart-24:before, .fui-eye-24:before, .fui-cross-24:before, .fui-cmd-24:before, .fui-checkround-24:before, .fui-checkmark-24:before, .fui-calendar-24:before, .fui-bubble-24:before, .fui-volume-24:before, .fui-camera-24:before {
-	font-family: 'Flat-UI-Icons-24';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
+  font-family: "Flat-UI-Icons-24";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
 .fui-video-24:before {
-	content: "\e000";
-}
+  content: "\e000"; }
+
 .fui-time-24:before {
-	content: "\e001";
-}
+  content: "\e001"; }
+
 .fui-settings-24:before {
-	content: "\e002";
-}
+  content: "\e002"; }
+
 .fui-plus-24:before {
-	content: "\e003";
-}
+  content: "\e003"; }
+
 .fui-new-24:before {
-	content: "\e005";
-}
+  content: "\e005"; }
+
 .fui-menu-24:before {
-	content: "\e006";
-}
+  content: "\e006"; }
+
 .fui-man-24:before {
-	content: "\e007";
-}
+  content: "\e007"; }
+
 .fui-mail-24:before {
-	content: "\e008";
-}
+  content: "\e008"; }
+
 .fui-lock-24:before {
-	content: "\e009";
-}
+  content: "\e009"; }
+
 .fui-location-24:before {
-	content: "\e00a";
-}
+  content: "\e00a"; }
+
 .fui-heart-24:before {
-	content: "\e00b";
-}
+  content: "\e00b"; }
+
 .fui-eye-24:before {
-	content: "\e00c";
-}
+  content: "\e00c"; }
+
 .fui-cross-24:before {
-	content: "\e00d";
-}
+  content: "\e00d"; }
+
 .fui-cmd-24:before {
-	content: "\e00e";
-}
+  content: "\e00e"; }
+
 .fui-checkround-24:before {
-	content: "\e00f";
-}
+  content: "\e00f"; }
+
 .fui-checkmark-24:before {
-	content: "\e010";
-}
+  content: "\e010"; }
+
 .fui-calendar-24:before {
-	content: "\e011";
-}
+  content: "\e011"; }
+
 .fui-bubble-24:before {
-	content: "\e012";
-}
+  content: "\e012"; }
+
 .fui-volume-24:before {
-	content: "\e013";
-}
+  content: "\e013"; }
+
 .fui-camera-24:before {
-	content: "\e004";
-} 
+  content: "\e004"; }

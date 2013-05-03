@@ -37,7 +37,6 @@ Route::get('signup', array('as'=>'signup', 'uses'=>'users@new'));
 Route::get('login', array('as'=>'login', 'uses'=>'users@login'));
 Route::get('logout', array('as'=>'logout', 'uses'=>'users@logout'));
 Route::get('browse', array('as'=>'browse', 'uses'=>'browse@index'));
-Route::get('movie', array('as'=>'movie', 'uses'=>'browse@movie'));
 Route::get('watchlist', array('as'=>'watchlist', 'uses'=>'watchlist@index'));
 
 Route::post('signup', array('before'=>'csrf', 'uses'=>'users@create'));

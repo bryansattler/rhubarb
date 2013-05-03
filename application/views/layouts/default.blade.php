@@ -33,9 +33,23 @@
 						</ul>
 						@else<!-- Show this nav if user is logged in-->
 						<ul class="nav">
-							<li>{{ HTML::link_to_route('activity', 'Activity Stream') }}</li>
-							<li>{{ HTML::link_to_route('watchlist', 'Watchlist') }}</li>
-							<li>{{ HTML::link_to_route('browse', 'Browse') }}</li>
+							<li><a href="/activity"><i class="fui-bubble-24"></i> Activity Stream</a></li>
+							<li><a href="/watchlist"><i class="fui-eye-24"></i> Activity Stream</a></li>
+							<li><a href="/browse"><i class="fui-menu-24"></i> Browse</a>
+								<ul>
+									<li><a href="#">Action &amp; Adventure</a></li>
+									<li><a href="#">Art &amp; Foreign</a></li>
+									<li><a href="#">Classics</a></li>
+									<li><a href="#">Comedy</a></li>	
+									<li><a href="#">Documentary</a></li>
+									<li><a href="#">Drama</a></li>
+									<li><a href="#">Horror</a></li>
+									<li><a href="#">Kids &amp; Family</a></li>
+									<li><a href="#">Mystery</a></li>
+									<li><a href="#">Romance</a></li>
+									<li><a href="#">Sci-fi &amp; Fantasy</a></li>			
+								</ul>	
+							</li>
 							<li>{{ HTML::link_to_route('logout', 'Logout ('.Auth::user()->username.')') }}</li>
 						</ul>
 						@endif
@@ -64,6 +78,6 @@
 		
 	</script>
     <!-- <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script> -->
-
+@yield('footer_script') <!-- Yields the script for the Browse view -->
 </body>	
 </html>

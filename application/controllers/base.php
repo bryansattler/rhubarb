@@ -28,8 +28,6 @@ class Base_Controller extends Controller {
         Asset::add('jquery_tagsinput', 'js/jquery.tagsinput.js');
         Asset::add('lte_ie7_24', 'js/lte-ie7-24.js');
 
-        Asset::add('application', 'js/application.js');
-
         /* Bootstrap JS */
         Asset::add('bootstrap_tooltip', 'js/bootstrap-tooltip.js');
         Asset::add('bootstrap_alert', 'js/bootstrap-alert.js');
@@ -55,6 +53,8 @@ class Base_Controller extends Controller {
         /* Custom Rhubarb JS */
         Asset::add('rhubarb', 'js/rhubarb.js');
 
+        Asset::add('application', 'js/application.js');
+
         /* Pusher Activity Stream */
         // Asset::add('pusher_js', 'http://js.pusher.com/2.0/pusher.min.js');
         // Asset::add('activity_stream','../activity-streams/src/PusherActivityStreamer.js');
@@ -62,14 +62,14 @@ class Base_Controller extends Controller {
 
 
         //fonts
-  //       Asset::add('ico_16_eot', 'fonts/Flat-UI-Icons-16.eot');
-  //       Asset::add('ico_16_svg', 'fonts/Flat-UI-Icons-16.svg');
-  //       Asset::add('ico_16_ttf', 'fonts/Flat-UI-Icons-16.ttf');
-		// Asset::add('ico_16_ttf', 'fonts/Flat-UI-Icons-16.woff');
-  //       Asset::add('ico_24_eot', 'fonts/Flat-UI-Icons-24.eot');
-  //       Asset::add('ico_24_svg', 'fonts/Flat-UI-Icons-24.svg');
-  //       Asset::add('ico_24_ttf', 'fonts/Flat-UI-Icons-24.ttf');
-		// Asset::add('ico_24_ttf', 'fonts/Flat-UI-Icons-24.woff');
+        Asset::add('ico_16_eot', 'fonts/Flat-UI-Icons-16.eot');
+        Asset::add('ico_16_svg', 'fonts/Flat-UI-Icons-16.svg');
+        Asset::add('ico_16_ttf', 'fonts/Flat-UI-Icons-16.ttf');
+		Asset::add('ico_16_ttf', 'fonts/Flat-UI-Icons-16.woff');
+        Asset::add('ico_24_eot', 'fonts/Flat-UI-Icons-24.eot');
+        Asset::add('ico_24_svg', 'fonts/Flat-UI-Icons-24.svg');
+        Asset::add('ico_24_ttf', 'fonts/Flat-UI-Icons-24.ttf');
+		Asset::add('ico_24_ttf', 'fonts/Flat-UI-Icons-24.woff');
 
         parent::__construct();
     }	
