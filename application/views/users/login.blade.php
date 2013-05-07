@@ -18,7 +18,7 @@
 		<p>{{ Form::submit('Login') }}</p>	
 
 		{{ Form::close() }}
-		<p class="form-hints">Forgot your Password?<a href="#"> Reset</a></p>
+		<!-- <p class="form-hints">Forgot your Password?<a href="/profile"> Reset</a></p> -->
 		<p class="form-hints">New to Rhubarb<a href="#"> Sign Up</a></p>
 	</div>
 @endsection

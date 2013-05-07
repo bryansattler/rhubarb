@@ -32,17 +32,104 @@
 |
 */
 
-Route::get('/', array('as'=>'activity', 'uses'=>'activity@index'));
+Route::get('/', array('as'=>'/', 'uses'=>'browse@index'));
+Route::get('profile', array('as' => 'profile','uses' => 'users@profile' )); 
 Route::get('signup', array('as'=>'signup', 'uses'=>'users@new'));
 Route::get('login', array('as'=>'login', 'uses'=>'users@login'));
 Route::get('logout', array('as'=>'logout', 'uses'=>'users@logout'));
-Route::get('browse', array('as'=>'browse', 'uses'=>'browse@index'));
-Route::get('watchlist', array('as'=>'watchlist', 'uses'=>'watchlist@index'));
+
+
+Route::controller('movies');
+Route::controller('watchlist');
 
 Route::post('signup', array('before'=>'csrf', 'uses'=>'users@create'));
 Route::post('login', array('before'=>'csrf', 'uses'=>'users@login'));
 
+//profile updates 
+Route::post('profile',function()
+{
+	$img = Input::file('profile_picture');
+	$user = User::find(Auth::user()->id);
+	$user->firstname = Input::get('firstname');
+	$user->lastname = Input::get('lastname');
+	$user->email = Input::get('email');
 
+	if ($img) {
+		$thumb = path('public').'pics/'.Auth::user()->id.'_thumb.jpg';
+		$smallthumb = path('public').'pics/'.Auth::user()->id.'_smallthumb.jpg';
+
+	    // Save a normal thumbnail & small thumbnail
+	    $success_thumb = Resizer::open( $img )->resize( 150 , 150 , 'crop' )->save( $thumb , 90 );
+	    $success_smallthumb = Resizer::open( $img )->resize( 24 , 24 , 'crop' )->save( $smallthumb , 90 );
+
+	    if ( $success_thumb && $success_smallthumb ) {
+	        $user->image_thumb = URL::base().'/pics/'.Auth::user()->id.'_thumb.jpg';
+	        $user->image_small_thumb =  URL::base().'/pics/'.Auth::user()->id.'_smallthumb.jpg';
+		}
+	}
+
+	if ($user->save()) {
+		return Redirect::to('profile')->with('message', 'You have updated your profile successfully');
+	}
+	return Redirect::to('profile')->with('message','Error in updating your profile. Try again.');
+});
+
+// route that handles changing password
+Route::post('changepassword',function()
+{
+
+	if (Auth::check()) {
+			$user = User::find(Auth::user()->id);
+			$password = Input::get('new_password');
+			$repassword = Input::get('password_confirmation');
+			
+			if ($repassword == $password) {
+				$user->password = Hash::make($password);
+				$user->save();
+				return Redirect::to('profile')
+						->with('message', "Password changed successfully!");
+			}
+			return Redirect::to('profile')
+						->with('message', "Password does not match");
+	}
+		return Redirect::to('login')
+						->with('message', "Unauthorized Access.");
+});
+
+
+Route::get('search',function()
+{
+	$apikey = 'caw7u9euxvcwuabe5zjwe9tg';
+	return View::make('search.search',array('title' => 'Search'))->with(array('apikey' => '$apikey'));
+});
+
+Route::post('search',function()
+{
+		$searchkeyword = Input::get('search');
+		$apikey = 'caw7u9euxvcwuabe5zjwe9tg';
+		$num_page = rand(10,50);
+		$endpoint = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=".$apikey."&q=".$searchkeyword."&page_limit=".$num_page;
+		// setup curl to make a call to the endpoint
+		$session = curl_init($endpoint);
+
+		// indicates that we want the response back
+		curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+		// exec curl and get the data back
+		$data = curl_exec($session);
+
+		// remember to close the curl session once we are finished retrieving the data
+		curl_close($session);
+
+		// decode the json data to make it easier to parse the php
+		$movies = json_decode($data);
+		
+		return View::make('search.search', array('title' => "Search " , 'movies' => $movies) )->with(array('apikey' => $apikey));
+
+});
+
+
+// Route::controller(Controller::detect());
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers

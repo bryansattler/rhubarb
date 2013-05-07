@@ -1,0 +1,2 @@
+"id","firstname","lastname","username","password","email","role_id","status","created_at","updated_at","image_thumb","image_small_thumb"
+1,"Bryan","Sattler","bryansattler","$2a$08$j4Kl4mk3vaBijuQ0c9bsf.sc.PnNLk8dIz9CbIRkaLKMza1eJbdNa","bsattler@gmail.com",0,0,"2013-04-23 01:08:34","2013-05-06 14:36:36","http://rhubarb.dev/pics/1_thumb.jpg","http://rhubarb.dev/pics/1_smallthumb.jpg"

@@ -9,14 +9,4 @@ class Browse_Controller extends Base_Controller {
 		return View::make('browse.index')
 		->with('title', 'Rhubarb - Browse Movies');
 	} 
-
-/* Display Movie View */
-	// public function get_movie() {
-	// 	return View::make('browse.movie')
-	// 		->with('title', 'Rhubarb - Movie');
-	// } 
-
-
-
-
 }

@@ -1239,9 +1239,8 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 60px;
+  height: 50px;
   padding: 4px 6px;
-  margin-bottom: 10px;
   font-size: 1.5em;
   line-height: 20px;
   color: #555555;
@@ -3609,7 +3608,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-fixed-top .navbar-inner,
 .navbar-fixed-bottom .navbar-inner {
-  padding: 10px;
+  padding: 5px 10px 0 10px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;

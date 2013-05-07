@@ -56,8 +56,8 @@ class Base_Controller extends Controller {
         Asset::add('application', 'js/application.js');
 
         /* Pusher Activity Stream */
-        // Asset::add('pusher_js', 'http://js.pusher.com/2.0/pusher.min.js');
-        // Asset::add('activity_stream','../activity-streams/src/PusherActivityStreamer.js');
+        Asset::add('pusher_js', 'http://js.pusher.com/2.0/pusher.min.js');
+        Asset::add('activity_stream','/activity-streams/src/PusherActivityStreamer.js');
 
 
 

@@ -9,4 +9,11 @@ class User extends Basemodel {
 		'password'=>'required|alpha_num|between:4,8|confirmed',
 		'password_confirmation'=>'required|alpha_num|between:4,8'
 	);
+
+
+
+	public function movies()
+	{
+		return $this->has_many('Movie');
+	}
 }
